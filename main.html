@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink Lizard Power Washing | Power Washing & Window Cleaning</title>
+  <meta name="description" content="Professional power washing and window cleaning for homes and businesses. Request a free estimate from Pink Lizard Power Washing.">
+  <meta name="theme-color" content="#ff4fa3">
+  <meta property="og:title" content="Pink Lizard Power Washing">
+  <meta property="og:description" content="Professional power washing and window cleaning for homes and businesses.">
+  <meta property="og:type" content="website">
+  <style>
+    :root{
+      --pink:#ff4fa3; --pink-dark:#df2f83; --pink-soft:#fff0f8;
+      --blue:#83d8f5; --blue-dark:#37add3; --ink:#111827;
+      --muted:#64748b; --white:#fff; --line:#e7edf3; --bg:#f8fbfd;
+      --shadow:0 16px 45px rgba(17,24,39,.09); --radius:22px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    button,input,textarea{font:inherit}
+    .container{width:min(1160px,92%);margin:auto}
+    .topbar{background:var(--ink);color:#fff;text-align:center;padding:8px;font-size:13px}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:-.5px;font-size:20px}
+    .logo{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--blue));color:#fff;font-size:22px;box-shadow:0 7px 18px rgba(255,79,163,.22)}
+    .navlinks{display:flex;align-items:center;gap:25px;font-size:14px;font-weight:700}
+    .navlinks a:hover{color:var(--pink-dark)}
+    .actions{display:flex;align-items:center;gap:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:13px 21px;font-weight:800;cursor:pointer;transition:.2s;gap:8px}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--pink);color:#fff;box-shadow:0 9px 22px rgba(255,79,163,.24)}
+    .btn-secondary{background:var(--white);border:1px solid var(--line)}
+    .btn-blue{background:var(--blue);color:var(--ink)}
+    .menu{display:none;background:none;border:0;font-size:26px}
+    .hero{padding:80px 0 90px;background:radial-gradient(circle at 85% 20%,rgba(131,216,245,.34),transparent 28%),radial-gradient(circle at 8% 10%,rgba(255,79,163,.13),transparent 28%),linear-gradient(135deg,#fff 0%,#fff7fb 52%,#effaff 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-block;padding:7px 12px;border-radius:999px;background:var(--pink-soft);color:var(--pink-dark);font-weight:800;font-size:13px;margin-bottom:18px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-3px;max-width:720px}
+    .hero h1 span{color:var(--pink)}
+    .hero p{font-size:18px;color:var(--muted);max-width:650px;margin:24px 0 30px}
+    .hero-buttons{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-card{min-height:460px;border-radius:30px;background:linear-gradient(145deg,#171923,#252a39);position:relative;overflow:hidden;box-shadow:var(--shadow);display:flex;align-items:flex-end;padding:28px}
+    .hero-card:before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 70% 20%,rgba(131,216,245,.65),transparent 25%),radial-gradient(circle at 30% 70%,rgba(255,79,163,.7),transparent 30%);filter:blur(8px)}
+    .hero-card:after{content:"BEFORE  →  AFTER";position:absolute;top:30px;right:25px;color:#fff;font-weight:900;letter-spacing:2px;font-size:12px;opacity:.9}
+    .hero-stat{position:relative;background:rgba(255,255,255,.94);border-radius:20px;padding:22px;width:min(360px,100%);box-shadow:0 10px 30px rgba(0,0,0,.18)}
+    .hero-stat strong{display:block;font-size:24px}.hero-stat span{color:var(--muted);font-size:14px}
+    section{padding:90px 0}
+    .section-head{text-align:center;max-width:730px;margin:0 auto 45px}
+    .section-head h2{font-size:clamp(32px,4vw,48px);line-height:1.1;letter-spacing:-1.5px}
+    .section-head p{color:var(--muted);margin-top:14px}
+    .trust{background:var(--ink);color:#fff;padding:32px 0}
+    .trust-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+    .trust-item{text-align:center;font-size:13px;font-weight:700}.trust-icon{font-size:25px;margin-bottom:5px}
+    .services{background:var(--bg)}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 8px 24px rgba(17,24,39,.04);transition:.2s}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .card-icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--pink-soft);font-size:22px;margin-bottom:17px}
+    .card h3{font-size:19px;margin-bottom:8px}.card p{font-size:14px;color:var(--muted)}
+    .center{text-align:center;margin-top:32px}
+    .window{background:linear-gradient(135deg,#effaff,#fff0f8)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .visual{min-height:430px;border-radius:28px;background:linear-gradient(145deg,#bfeefe,#ffcae5);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .visual:before{content:"WINDOW CLEANING";position:absolute;inset:30px;border:2px solid rgba(255,255,255,.75);border-radius:22px;display:grid;place-items:center;color:#fff;font-size:30px;font-weight:900;letter-spacing:3px;text-align:center}
+    .checklist{display:grid;gap:14px;margin:25px 0}.check{display:flex;gap:10px;align-items:flex-start}.check b{color:var(--pink)}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .why-grid .card{min-height:190px}
+    .gallery{background:var(--bg)}
+    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .gallery-item{height:230px;border-radius:20px;display:flex;align-items:flex-end;padding:16px;color:#fff;font-weight:900;background:linear-gradient(145deg,#252a39,#ff4fa3);position:relative;overflow:hidden}
+    .gallery-item:nth-child(2){background:linear-gradient(145deg,#83d8f5,#263244)}
+    .gallery-item:nth-child(3){background:linear-gradient(145deg,#333,#83d8f5)}
+    .gallery-item:nth-child(4){background:linear-gradient(145deg,#ffcae5,#df2f83)}
+    .gallery-item:nth-child(5){background:linear-gradient(145deg,#222,#bfeefe)}
+    .gallery-item:nth-child(6){background:linear-gradient(145deg,#ff4fa3,#222)}
+    .gallery-item:nth-child(7){background:linear-gradient(145deg,#83d8f5,#fff)}
+    .gallery-item:nth-child(8){background:linear-gradient(145deg,#222,#ffcae5)}
+    .estimate{background:var(--ink);color:#fff}
+    .form-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:45px;align-items:start}
+    .estimate-intro p{color:#cbd5e1;margin-top:16px}
+    .form{background:#fff;color:var(--ink);border-radius:25px;padding:30px;box-shadow:var(--shadow)}
+    .form h3{margin-bottom:20px;font-size:24px}.step{margin-bottom:23px}.step label.title{display:block;font-weight:900;margin-bottom:10px}
+    .choices{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+    .choice{position:relative}.choice input{position:absolute;opacity:0}.choice label{display:block;border:1px solid var(--line);border-radius:13px;padding:11px 13px;font-size:13px;cursor:pointer}
+    .choice input:checked+label{border-color:var(--pink);background:var(--pink-soft);color:var(--pink-dark);font-weight:800}
+    .inputs{display:grid;grid-template-columns:1fr 1fr;gap:12px}.input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;outline:none}.input:focus{border-color:var(--blue-dark);box-shadow:0 0 0 3px rgba(131,216,245,.25)}
+    textarea.input{min-height:95px;resize:vertical}.full{grid-column:1/-1}
+    .faq{background:#fff}.faq-list{max-width:850px;margin:auto;display:grid;gap:10px}.faq details{border:1px solid var(--line);border-radius:15px;padding:18px 20px}.faq summary{font-weight:800;cursor:pointer}
+    footer{background:#0b0e14;color:#fff;padding:55px 0 25px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px}.footer p,.footer a{color:#aeb8c7;font-size:14px}.footer h4{margin-bottom:12px}.footer-bottom{border-top:1px solid #252b36;margin-top:40px;padding-top:20px;font-size:13px;color:#778292}
+    .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:100;padding:20px;overflow:auto}.modal.open{display:grid;place-items:center}.modal .form{width:min(760px,100%);position:relative}.close{position:absolute;right:20px;top:15px;border:0;background:none;font-size:27px;cursor:pointer}
+    @media(max-width:900px){.navlinks{display:none}.actions .btn-secondary{display:none}.menu{display:block}.hero-grid,.split,.form-wrap{grid-template-columns:1fr}.hero-card{min-height:350px}.trust-grid{grid-template-columns:repeat(3,1fr)}.cards{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){nav{height:68px}.brand{font-size:16px}.logo{width:37px;height:37px}.hero{padding:55px 0}.hero h1{letter-spacing:-2px}.hero p{font-size:16px}.hero-buttons .btn{width:100%}section{padding:65px 0}.trust-grid{grid-template-columns:repeat(2,1fr)}.cards,.why-grid,.gallery-grid{grid-template-columns:1fr}.inputs,.choices{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.form{padding:22px}.hero-card{min-height:300px}}
+  </style>
+</head>
+<body>
+  <div class="topbar">Free estimates • Residential & Commercial • Quality-focused exterior cleaning</div>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#"><span class="logo">🦎</span>Pink Lizard Power Washing</a>
+        <div class="navlinks">
+          <a href="#services">Services</a><a href="#windows">Window Cleaning</a><a href="#why">Why Us</a><a href="#gallery">Our Work</a><a href="#faq">FAQ</a>
+        </div>
+        <div class="actions">
+          <a class="btn btn-secondary" href="tel:+10000000000">Call Now</a>
+          <button class="btn btn-primary open-estimate">Get a Free Estimate</button>
+        </div>
+        <button class="menu" aria-label="Open menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">PROFESSIONAL EXTERIOR CLEANING</span>
+          <h1>Professional <span>Power Washing</span> & Window Cleaning</h1>
+          <p>High-quality exterior cleaning for homes and businesses. From siding and patios to windows, decks, driveways, and more, Pink Lizard Power Washing helps keep your property looking its best.</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary open-estimate">Get a Free Estimate →</button>
+            <a class="btn btn-secondary" href="tel:+10000000000">☎ Call Now</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-stat"><strong>Quality work. Clean results.</strong><span>Professional service with attention to the details that make a property look its best.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust">
+      <div class="container trust-grid">
+        <div class="trust-item"><div class="trust-icon">✓</div>Quality Focused</div>
+        <div class="trust-item"><div class="trust-icon">◆</div>Attention to Detail</div>
+        <div class="trust-item"><div class="trust-icon">↗</div>Professional Service</div>
+        <div class="trust-item"><div class="trust-icon">⌂</div>Residential & Commercial</div>
+        <div class="trust-item"><div class="trust-icon">$</div>Fair Pricing</div>
+        <div class="trust-item"><div class="trust-icon">☆</div>Free Estimates</div>
+      </div>
+    </div>
+
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-head"><h2>Exterior Cleaning Services</h2><p>Practical, detailed cleaning for the surfaces around your home or business.</p></div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">⌂</div><h3>House & Siding Washing</h3><p>Remove dirt, algae, mildew and buildup while refreshing the exterior appearance of your home.</p></article>
+          <article class="card"><div class="card-icon">▤</div><h3>Deck Cleaning</h3><p>Clean wood and composite decks from dirt, algae, mildew and weather-related buildup.</p></article>
+          <article class="card"><div class="card-icon">◈</div><h3>Patio Cleaning</h3><p>Refresh patios and outdoor entertaining areas by removing dirt, organic growth and buildup.</p></article>
+          <article class="card"><div class="card-icon">▦</div><h3>Driveway Cleaning</h3><p>Restore the appearance of concrete and other driveway surfaces by removing grime and buildup.</p></article>
+          <article class="card"><div class="card-icon">↔</div><h3>Walkway & Sidewalk</h3><p>Clean paths, sidewalks and high-traffic exterior surfaces.</p></article>
+          <article class="card"><div class="card-icon">▥</div><h3>Fence Cleaning</h3><p>Remove dirt, algae, mildew and exterior buildup from fences.</p></article>
+          <article class="card"><div class="card-icon">⌑</div><h3>Porch Cleaning</h3><p>Refresh porches, steps and entry areas.</p></article>
+          <article class="card"><div class="card-icon">□</div><h3>Window Cleaning</h3><p>Interior and exterior window cleaning for residential and commercial properties.</p></article>
+        </div>
+        <div class="center"><button class="btn btn-primary open-estimate">View All Services</button></div>
+      </div>
+    </section>
+
+    <section id="windows" class="window">
+      <div class="container split">
+        <div class="visual" aria-label="Professional window cleaning visual"></div>
+        <div>
+          <span class="eyebrow">WINDOW CLEANING</span>
+          <h2>Crystal-Clear Windows. Inside & Out.</h2>
+          <p style="color:var(--muted);margin-top:16px">Detailed window cleaning focused on clean glass, frames and surrounding areas.</p>
+          <div class="checklist">
+            <div class="check"><b>✓</b><span>Residential properties</span></div><div class="check"><b>✓</b><span>Commercial properties</span></div>
+            <div class="check"><b>✓</b><span>Interior & exterior windows</span></div><div class="check"><b>✓</b><span>Screens where applicable</span></div>
+            <div class="check"><b>✓</b><span>Hard-to-reach windows where practical and safe</span></div>
+          </div>
+          <button class="btn btn-primary open-estimate">Request a Window Cleaning Estimate</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <div class="section-head"><h2>Why Choose Pink Lizard?</h2><p>A straightforward approach to quality work and a professional customer experience.</p></div>
+        <div class="why-grid">
+          <article class="card"><div class="card-icon">✦</div><h3>Quality Comes First</h3><p>We focus on doing the job correctly rather than simply rushing through as many properties as possible.</p></article>
+          <article class="card"><div class="card-icon">⌁</div><h3>Attention to Detail</h3><p>We take the time to clean the areas that can make the biggest difference in your property's appearance.</p></article>
+          <article class="card"><div class="card-icon">✓</div><h3>Professional Service</h3><p>We aim to make the customer experience simple, clear and professional from estimate to completion.</p></article>
+          <article class="card"><div class="card-icon">⌂</div><h3>Residential & Commercial</h3><p>Service options for homeowners, businesses and commercial properties.</p></article>
+          <article class="card"><div class="card-icon">♡</div><h3>Free Estimates</h3><p>Make it easy to understand your options and request a quote.</p></article>
+          <article class="card"><div class="card-icon">→</div><h3>Easy Communication</h3><p>Clear next steps and a simple way to get in touch when you need service.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="section-head"><h2>See the Difference</h2><p>Project photos can be added here as your portfolio grows.</p></div>
+        <div class="gallery-grid">
+          <div class="gallery-item" role="img" aria-label="House siding before and after power washing">House Washing</div>
+          <div class="gallery-item" role="img" aria-label="Driveway before and after pressure washing">Driveways</div>
+          <div class="gallery-item" role="img" aria-label="Patio before and after cleaning">Patios</div>
+          <div class="gallery-item" role="img" aria-label="Deck before and after cleaning">Decks</div>
+          <div class="gallery-item" role="img" aria-label="Fence before and after cleaning">Fences</div>
+          <div class="gallery-item" role="img" aria-label="Walkway before and after cleaning">Walkways</div>
+          <div class="gallery-item" role="img" aria-label="Professional residential window cleaning">Windows</div>
+          <div class="gallery-item" role="img" aria-label="Residential exterior surface cleaning">Exterior Surfaces</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="container">
+        <div class="section-head"><h2>Frequently Asked Questions</h2><p>Quick answers to common cleaning questions.</p></div>
+        <div class="faq-list">
+          <details><summary>How much does power washing cost?</summary><p>Pricing depends on the size, surface, condition and scope of the project. Request a free estimate for a project-specific quote.</p></details>
+          <details><summary>How often should a house be power washed?</summary><p>It depends on the property and surrounding conditions. Many homeowners schedule exterior cleaning when buildup becomes noticeable.</p></details>
+          <details><summary>Can you clean vinyl siding?</summary><p>Yes. Siding can be cleaned using an approach appropriate for the material and condition.</p></details>
+          <details><summary>Do you clean decks and concrete?</summary><p>Yes. Decks, patios, driveways, walkways and other suitable exterior surfaces can be cleaned.</p></details>
+          <details><summary>Do you provide window cleaning?</summary><p>Yes. Residential and commercial interior and exterior window cleaning are available.</p></details>
+          <details><summary>Do you provide free estimates?</summary><p>Yes. Use the estimate form to send your project details and request a free estimate.</p></details>
+          <details><summary>Do I need to be home during service?</summary><p>That depends on the property and the work being completed. This can be discussed during scheduling.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="estimate" id="contact">
+      <div class="container form-wrap">
+        <div class="estimate-intro">
+          <span class="eyebrow">START YOUR PROJECT</span>
+          <h2>Ready for a cleaner property?</h2>
+          <p>Tell us what you need cleaned and we'll review your request. The form takes about a minute.</p>
+          <div class="checklist">
+            <div class="check"><b>✓</b><span>Short, simple estimate request</span></div>
+            <div class="check"><b>✓</b><span>Select multiple services</span></div>
+            <div class="check"><b>✓</b><span>Residential or commercial</span></div>
+          </div>
+        </div>
+        <form class="form" id="estimateForm">
+          <h3>Request Your Free Estimate</h3>
+          <div class="step"><label class="title">1. What service do you need?</label><div class="choices">
+            <div class="choice"><input id="s1" type="checkbox" name="service" value="House / Siding Washing"><label for="s1">House / Siding Washing</label></div>
+            <div class="choice"><input id="s2" type="checkbox" name="service" value="Patio Cleaning"><label for="s2">Patio Cleaning</label></div>
+            <div class="choice"><input id="s3" type="checkbox" name="service" value="Deck Cleaning"><label for="s3">Deck Cleaning</label></div>
+            <div class="choice"><input id="s4" type="checkbox" name="service" value="Driveway Cleaning"><label for="s4">Driveway Cleaning</label></div>
+            <div class="choice"><input id="s5" type="checkbox" name="service" value="Walkway / Sidewalk Cleaning"><label for="s5">Walkway / Sidewalk</label></div>
+            <div class="choice"><input id="s6" type="checkbox" name="service" value="Fence Cleaning"><label for="s6">Fence Cleaning</label></div>
+            <div class="choice"><input id="s7" type="checkbox" name="service" value="Porch Cleaning"><label for="s7">Porch Cleaning</label></div>
+            <div class="choice"><input id="s8" type="checkbox" name="service" value="Window Cleaning"><label for="s8">Window Cleaning</label></div>
+            <div class="choice"><input id="s9" type="checkbox" name="service" value="Commercial Cleaning"><label for="s9">Commercial Cleaning</label></div>
+            <div class="choice"><input id="s10" type="checkbox" name="service" value="Multiple Services"><label for="s10">Multiple Services</label></div>
+            <div class="choice"><input id="s11" type="checkbox" name="service" value="Other"><label for="s11">Other</label></div>
+          </div></div>
+          <div class="step"><label class="title">2. Property type</label><div class="choices">
+            <div class="choice"><input id="r" type="radio" name="type" value="Residential" required><label for="r">Residential</label></div>
+            <div class="choice"><input id="c" type="radio" name="type" value="Commercial"><label for="c">Commercial</label></div>
+          </div></div>
+          <div class="step"><label class="title">3. Your information</label><div class="inputs">
+            <input class="input" name="name" placeholder="Full Name" required><input class="input" name="phone" type="tel" placeholder="Phone Number" required>
+            <input class="input full" name="address" placeholder="Property Address" required><input class="input full" name="email" type="email" placeholder="Email Address" required>
+            <textarea class="input full" name="details" placeholder="Tell us a little about what you need cleaned (optional)"></textarea>
+          </div></div>
+          <button class="btn btn-primary" style="width:100%" type="submit">Request My Free Estimate</button>
+          <p id="success" style="display:none;color:#16803b;font-weight:800;margin-top:15px">Thanks! Your estimate request has been received. We'll review your information and get back to you shortly.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><div class="brand"><span class="logo">🦎</span>Pink Lizard Power Washing</div><p style="margin-top:15px">Power Washing & Window Cleaning</p></div>
+      <div><h4>Services</h4><p><a href="#services">House Washing</a></p><p><a href="#services">Driveways</a></p><p><a href="#windows">Window Cleaning</a></p></div>
+      <div><h4>Service Areas</h4><p>Southborough</p><p>Northborough</p><p>Marlborough</p><p>Westborough</p></div>
+      <div><h4>Contact</h4><p><a href="tel:+10000000000">Call Now</a></p><p><a href="mailto:hello@pinklizardpowerwashing.com">Email Us</a></p><button class="btn btn-primary open-estimate" style="margin-top:12px">Free Estimate</button></div>
+    </div>
+    <div class="container footer-bottom">© 2026 Pink Lizard Power Washing. All rights reserved. &nbsp; Privacy Policy &nbsp; Terms of Service</div>
+  </footer>
+
+  <div class="modal" id="modal">
+    <form class="form" id="modalForm">
+      <button type="button" class="close" aria-label="Close">×</button>
+      <h3>Request Your Free Estimate</h3>
+      <p style="color:var(--muted);margin-bottom:18px">Select your services and send us the details below.</p>
+      <div class="choices" style="margin-bottom:18px">
+        <div class="choice"><input id="m1" type="checkbox" name="service"><label for="m1">House / Siding Washing</label></div>
+        <div class="choice"><input id="m2" type="checkbox" name="service"><label for="m2">Patio Cleaning</label></div>
+        <div class="choice"><input id="m3" type="checkbox" name="service"><label for="m3">Deck Cleaning</label></div>
+        <div class="choice"><input id="m4" type="checkbox" name="service"><label for="m4">Driveway Cleaning</label></div>
+        <div class="choice"><input id="m5" type="checkbox" name="service"><label for="m5">Walkway / Sidewalk</label></div>
+        <div class="choice"><input id="m6" type="checkbox" name="service"><label for="m6">Fence Cleaning</label></div>
+        <div class="choice"><input id="m7" type="checkbox" name="service"><label for="m7">Porch Cleaning</label></div>
+        <div class="choice"><input id="m8" type="checkbox" name="service"><label for="m8">Window Cleaning</label></div>
+      </div>
+      <div class="inputs">
+        <input class="input" placeholder="Full Name" required><input class="input" placeholder="Phone Number" required>
+        <input class="input full" placeholder="Property Address" required><input class="input full" type="email" placeholder="Email Address" required>
+        <textarea class="input full" placeholder="Optional details"></textarea>
+      </div>
+      <button class="btn btn-primary" style="width:100%;margin-top:18px" type="submit">Request My Free Estimate</button>
+    </form>
+  </div>
+
+  <script>
+    const modal=document.getElementById('modal');
+    document.querySelectorAll('.open-estimate').forEach(b=>b.addEventListener('click',()=>modal.classList.add('open')));
+    document.querySelector('.close').addEventListener('click',()=>modal.classList.remove('open'));
+    modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+    document.getElementById('estimateForm').addEventListener('submit',e=>{
+      e.preventDefault();
+      document.getElementById('success').style.display='block';
+      e.target.reset();
+    });
+    document.getElementById('modalForm').addEventListener('submit',e=>{
+      e.preventDefault();
+      e.target.innerHTML='<h3>Request received!</h3><p style="color:var(--muted);margin:12px 0 20px">Thanks! We received your estimate request and will get back to you shortly.</p><button type="button" class="btn btn-primary" onclick="modal.classList.remove(\'open\')">Close</button>';
+    });
+  </script>
+</body>
+</html>
