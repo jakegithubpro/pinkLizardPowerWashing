@@ -64,21 +64,31 @@
     .center{text-align:center;margin-top:32px}
     .window{background:linear-gradient(135deg,#effaff,#fff0f8)}
     .split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-    .visual{min-height:430px;border-radius:28px;background:linear-gradient(145deg,#bfeefe,#ffcae5);position:relative;overflow:hidden;box-shadow:var(--shadow)}
-    .visual:before{content:"WINDOW CLEANING";position:absolute;inset:30px;border:2px solid rgba(255,255,255,.75);border-radius:22px;display:grid;place-items:center;color:#fff;font-size:30px;font-weight:900;letter-spacing:3px;text-align:center}
+    .visual{min-height:430px;border-radius:28px;background-image:linear-gradient(rgba(17,24,39,.08),rgba(17,24,39,.08)),url("images/IMG_2109.jpg");background-size:cover;background-position:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .visual:before{content:"WINDOW CLEANING";position:absolute;inset:30px;border:2px solid rgba(255,255,255,.75);border-radius:22px;display:grid;place-items:center;color:#fff;font-size:30px;font-weight:900;letter-spacing:3px;text-align:center;text-shadow:0 2px 10px rgba(0,0,0,.35)}
     .checklist{display:grid;gap:14px;margin:25px 0}.check{display:flex;gap:10px;align-items:flex-start}.check b{color:var(--pink)}
     .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .why-grid .card{min-height:190px}
     .gallery{background:var(--bg)}
-    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-    .gallery-item{height:230px;border-radius:20px;display:flex;align-items:flex-end;padding:16px;color:#fff;font-weight:900;background:linear-gradient(145deg,#252a39,#ff4fa3);position:relative;overflow:hidden}
-    .gallery-item:nth-child(2){background:linear-gradient(145deg,#83d8f5,#263244)}
-    .gallery-item:nth-child(3){background:linear-gradient(145deg,#333,#83d8f5)}
-    .gallery-item:nth-child(4){background:linear-gradient(145deg,#ffcae5,#df2f83)}
-    .gallery-item:nth-child(5){background:linear-gradient(145deg,#222,#bfeefe)}
-    .gallery-item:nth-child(6){background:linear-gradient(145deg,#ff4fa3,#222)}
-    .gallery-item:nth-child(7){background:linear-gradient(145deg,#83d8f5,#fff)}
-    .gallery-item:nth-child(8){background:linear-gradient(145deg,#222,#ffcae5)}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .gallery-item{
+      height:270px;border-radius:20px;display:flex;align-items:flex-end;padding:18px;color:#fff;font-weight:900;
+      background-size:cover;background-position:center;position:relative;overflow:hidden;
+      box-shadow:0 10px 25px rgba(17,24,39,.10);isolation:isolate;
+    }
+    .gallery-item:after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(0,0,0,0) 42%,rgba(0,0,0,.68) 100%);
+      z-index:-1;
+    }
+    .gallery-item.window-gallery:before{
+      content:"";position:absolute;width:55%;height:145%;top:-25%;left:48%;
+      transform:rotate(24deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.48),transparent);
+      opacity:.75;z-index:0;pointer-events:none;
+    }
+    .gallery-item span{position:relative;z-index:2;text-shadow:0 2px 8px rgba(0,0,0,.45)}
+    @media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.gallery-grid{grid-template-columns:1fr}}
     .estimate{background:var(--ink);color:#fff}
     .form-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:45px;align-items:start}
     .estimate-intro p{color:#cbd5e1;margin-top:16px}
@@ -103,10 +113,10 @@
       <nav>
         <a class="brand" href="#"><span class="logo">🦎</span>Pink Lizard Power Washing</a>
         <div class="navlinks">
-          <a href="#services">Services</a><a href="#windows">Window Cleaning</a><a href="#why">Why Us</a><a href="#gallery">Our Work</a><a href="#faq">FAQ</a>
+          <a href="#services">Services</a><a href="#windows">Window Cleaning</a><a href="#why">Why Us</a><a href="#gallery">Our Work</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
         </div>
         <div class="actions">
-          <a class="btn btn-secondary" href="tel:+10000000000">Call Now</a>
+          <a class="btn btn-secondary" href="tel:+15083355144">Call Now</a>
           <button class="btn btn-primary open-estimate">Get a Free Estimate</button>
         </div>
         <button class="menu" aria-label="Open menu">☰</button>
@@ -123,7 +133,7 @@
           <p>High-quality exterior cleaning for homes and businesses. From siding and patios to windows, decks, driveways, and more, Pink Lizard Power Washing helps keep your property looking its best.</p>
           <div class="hero-buttons">
             <button class="btn btn-primary open-estimate">Get a Free Estimate →</button>
-            <a class="btn btn-secondary" href="tel:+10000000000">☎ Call Now</a>
+            <a class="btn btn-secondary" href="tel:+15083355144">☎ Call Now</a>
           </div>
         </div>
         <div class="hero-card">
@@ -194,15 +204,44 @@
     <section id="gallery" class="gallery">
       <div class="container">
         <div class="section-head"><h2>See the Difference</h2><p>Project photos can be added here as your portfolio grows.</p></div>
-        <div class="gallery-grid">
-          <div class="gallery-item" role="img" aria-label="House siding before and after power washing">House Washing</div>
-          <div class="gallery-item" role="img" aria-label="Driveway before and after pressure washing">Driveways</div>
-          <div class="gallery-item" role="img" aria-label="Patio before and after cleaning">Patios</div>
-          <div class="gallery-item" role="img" aria-label="Deck before and after cleaning">Decks</div>
-          <div class="gallery-item" role="img" aria-label="Fence before and after cleaning">Fences</div>
-          <div class="gallery-item" role="img" aria-label="Walkway before and after cleaning">Walkways</div>
-          <div class="gallery-item" role="img" aria-label="Professional residential window cleaning">Windows</div>
-          <div class="gallery-item" role="img" aria-label="Residential exterior surface cleaning">Exterior Surfaces</div>
+        
+<div class="gallery-grid">
+  <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1600270033925-f97edf2e3852?auto=format&fit=crop&q=90&w=1400')" role="img" aria-label="Clean suburban house exterior"><span>House Washing</span></div>
+  <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1695550056778-de79c8cd909e?auto=format&fit=crop&q=90&w=1400')" role="img" aria-label="Wooden backyard deck with outdoor furniture"><span>Decks</span></div>
+  <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1773283032889-98d54615ce13?auto=format&fit=crop&q=90&w=1400')" role="img" aria-label="Outdoor residential patio with plants and lights"><span>Patios</span></div>
+  <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1726968335694-02219ed7ce96?auto=format&fit=crop&q=90&w=1400')" role="img" aria-label="Residential driveway and house exterior"><span>Driveways</span></div>
+  <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1777017788095-c0ee4dd26c68?auto=format&fit=crop&q=90&w=1400')" role="img" aria-label="White residential fence in front of a house"><span>Fences</span></div>
+  <div class="gallery-item window-gallery" style="background-image:url('https://images.unsplash.com/photo-1771366260867-7e07094579d7?auto=format&fit=crop&q=90&w=1400')" role="img" aria-label="Clean white house with large reflective windows"><span>Window Cleaning</span></div>
+</div>
+      </div>
+    </section>
+
+
+    <section id="reviews" class="reviews" style="background:#fff0f8">
+      <div class="container">
+        <div class="section-head">
+          <h2>What Our Customers Say</h2>
+          <p>Real feedback from customers who have worked with Pink Lizard.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div style="color:var(--pink);font-size:21px;letter-spacing:2px;margin-bottom:12px">★★★★★</div>
+            <p style="font-size:15px;color:var(--ink);margin-bottom:18px">“Jake did an awesome job power washing our house. He also did the Patio and the front walkway. He was very polite and cleaned up after himself and charged a very fair price. Would recommend him!”</p>
+            <h3 style="margin:0">Gregory Pardo</h3>
+            <p>Verified customer review</p>
+          </article>
+          <article class="card">
+            <div style="color:var(--pink);font-size:21px;letter-spacing:2px;margin-bottom:12px">★★★★★</div>
+            <p style="font-size:15px;color:var(--ink);margin-bottom:18px">“Jake did an excellent job power washing our stone steps and front walkway. The steps were covered in moss and quite slippery. Now they are 100% usable again! He was timely and very communicative. Before/after shown in photos. Thanks, Jake!!”</p>
+            <h3 style="margin:0">Jackie Straz</h3>
+            <p>Verified customer review</p>
+          </article>
+          <article class="card">
+            <div style="color:var(--pink);font-size:21px;letter-spacing:2px;margin-bottom:12px">★★★★★</div>
+            <p style="font-size:15px;color:var(--ink);margin-bottom:18px">“Jake is a great story and great worker. Highly recommended”</p>
+            <h3 style="margin:0">Stephen Cuckos</h3>
+            <p>Verified customer review</p>
+          </article>
         </div>
       </div>
     </section>
@@ -270,7 +309,7 @@
       <div><div class="brand"><span class="logo">🦎</span>Pink Lizard Power Washing</div><p style="margin-top:15px">Power Washing & Window Cleaning</p></div>
       <div><h4>Services</h4><p><a href="#services">House Washing</a></p><p><a href="#services">Driveways</a></p><p><a href="#windows">Window Cleaning</a></p></div>
       <div><h4>Service Areas</h4><p>Southborough</p><p>Northborough</p><p>Marlborough</p><p>Westborough</p></div>
-      <div><h4>Contact</h4><p><a href="tel:+10000000000">Call Now</a></p><p><a href="mailto:hello@pinklizardpowerwashing.com">Email Us</a></p><button class="btn btn-primary open-estimate" style="margin-top:12px">Free Estimate</button></div>
+      <div><h4>Contact</h4><p><a href="tel:+15083355144">Call Now</a></p><p><a href="mailto:pinklizardservices@gmail.com">Email Us</a></p><button class="btn btn-primary open-estimate" style="margin-top:12px">Free Estimate</button></div>
     </div>
     <div class="container footer-bottom">© 2026 Pink Lizard Power Washing. All rights reserved. &nbsp; Privacy Policy &nbsp; Terms of Service</div>
   </footer>
@@ -306,12 +345,23 @@
     modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
     document.getElementById('estimateForm').addEventListener('submit',e=>{
       e.preventDefault();
+      const f = new FormData(e.target);
+      const services = [...document.querySelectorAll('#estimateForm input[name="service"]:checked')].map(x=>x.value).join(', ') || 'Not specified';
+      const body = `NEW PINK LIZARD ESTIMATE REQUEST%0A%0AName: ${encodeURIComponent(f.get('name'))}%0APhone: ${encodeURIComponent(f.get('phone'))}%0AEmail: ${encodeURIComponent(f.get('email'))}%0AAddress: ${encodeURIComponent(f.get('address'))}%0AProperty: ${encodeURIComponent(f.get('type'))}%0AServices: ${encodeURIComponent(services)}%0ADetails: ${encodeURIComponent(f.get('details') || '')}`;
+      window.location.href = `sms:+15083355144?body=${body}`;
       document.getElementById('success').style.display='block';
-      e.target.reset();
     });
     document.getElementById('modalForm').addEventListener('submit',e=>{
       e.preventDefault();
-      e.target.innerHTML='<h3>Request received!</h3><p style="color:var(--muted);margin:12px 0 20px">Thanks! We received your estimate request and will get back to you shortly.</p><button type="button" class="btn btn-primary" onclick="modal.classList.remove(\'open\')">Close</button>';
+      const inputs = e.target.querySelectorAll('input, textarea');
+      const name = inputs[8]?.value || '';
+      const phone = inputs[9]?.value || '';
+      const address = inputs[10]?.value || '';
+      const email = inputs[11]?.value || '';
+      const details = inputs[12]?.value || '';
+      const services = [...e.target.querySelectorAll('input[type="checkbox"]:checked')].map(x=>x.nextElementSibling.textContent.trim()).join(', ') || 'Not specified';
+      const body = `NEW PINK LIZARD ESTIMATE REQUEST%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0AAddress: ${encodeURIComponent(address)}%0AServices: ${encodeURIComponent(services)}%0ADetails: ${encodeURIComponent(details)}`;
+      window.location.href = `sms:+15083355144?body=${body}`;
     });
   </script>
 </body>
